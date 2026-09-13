@@ -5,9 +5,11 @@
 # This file is published as a TEMPLATE: the persona carries `<PLACEHOLDER>`
 # tokens for machine-specific paths (WSL distro, project root, ANSYS install).
 # Fill them in for your own deployment before use.
-# `scripts/sync-preset.cjs` deliberately does NOT overwrite an existing
-# `agent.cordis.yml` in the runtime directory for this preset, so a locally
-# instantiated copy is never clobbered by the generic template.
+#
+# Keep your instantiated copy in the runtime preset directory
+# (`${DSH_HOME:-$HOME/.dsh}/.agent-presets/router-sci/`) rather than editing a
+# checkout in place: once filled in, that copy carries your real paths and
+# should not be clobbered by re-cloning or re-copying this template.
 #
 # Everything in `router-standard` is here unchanged — same router-bootstrap
 # progressive disclosure, same Git Bash shell seam, same native presentation —

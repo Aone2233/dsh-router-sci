@@ -52,15 +52,16 @@ Fluent                   →  Windows 侧（批跑脚本）
 ### 前置
 
 - [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（dsh）
-- 一个可用的 `@deepseek-ai/dsh-router-standard` 或本仓库自带的 bootstrap
-  （已随仓库提供，见下方「与上游的关系」）
+- 无需额外安装——本仓库自带全部 bootstrap 与执行器文件
+  （见下方「与上游的关系」）。它们直接以相对路径被 `agent.cordis.yml` 引用，
+  不经过 npm 安装。
 
 ### 步骤
 
 ```bash
 # 1. 克隆
-git clone https://github.com/<你的账号>/dsh-preset-sci.git
-cd dsh-preset-sci
+git clone https://github.com/<你的账号>/dsh-router-sci.git
+cd dsh-router-sci
 
 # 2. 复制到 dsh 的 agent-presets 目录（dsh 只扫一级子目录）
 #    Windows:
@@ -105,11 +106,18 @@ router-core-v34.mjs
 本仓库的原创部分为：
 
 ```
-agent.cordis.yml   （persona 与工具路由约定）
+agent.cordis.yml   （persona、工具路由约定、科研写作纪律 —— 该文件整体
+                    改编自 DeepSeek Harness Standard 预设的 composition，
+                    其余插件行沿用上游；只有上述内容为原创）
 preset.yml         （预设元数据）
+README.md / NOTICE （文档与许可说明）
 ```
 
-详见 [NOTICE](NOTICE)。若上游发布新版本，可自行同步上述代码文件。
+请注意 `agent.cordis.yml` **同时**包含派生的插件行与原创的 persona，
+两部分的归属不同，详见 [NOTICE](NOTICE)。
+
+若上游发布新版本，可自行同步上述代码文件；同步 `router-core.mjs` 时注意
+本仓库对它做过一处兼容性补丁（`sessionEvents` 回退，见文件内注释）。
 
 ## 自定义
 
