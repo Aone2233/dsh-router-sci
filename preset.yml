@@ -1,0 +1,3 @@
+name: 科研计算 Router Sci
+description: "核工程粉体/多相流仿真科研预设：中文科研 persona（LAMMPS 微观碰撞 + Fluent DPM 宏观沉积 + LaTeX 论文），WSL↔Windows 双环境工具路由（重 IO 留 WSL，Fluent 走 Windows），科研写作纪律与续接工作流引导。基于 router-standard（native 直调 + 渐进披露路由 + Git Bash shell seam）。"
+order: 0

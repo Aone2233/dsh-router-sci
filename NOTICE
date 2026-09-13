@@ -1,0 +1,59 @@
+NOTICE
+
+This project builds on prior open work. The following files in this
+repository are derived from third-party MIT-licensed sources and are
+redistributed here with their copyright notices preserved:
+
+## 1. router-standard (dsh-routing-suite)
+
+Source: https://github.com/yjh051108/dsh-routing-suite
+Copyright (c) 2026 yjh051108
+License: MIT
+
+The following files are copied from, or derived from, that project's
+`preset/router-standard/` directory:
+
+    gitbash-executor.mjs
+    router-bootstrap.mjs
+    router-bootstrap-v34.mjs
+    router-bootstrap-v34.selftest.mjs
+    router-core.mjs
+    router-core-v34.mjs
+
+`agent.cordis.yml` in this repository is a modified composition originally
+adapted from the DeepSeek Harness **Standard** agent preset (MIT); the
+original DeepSeek copyright and MIT license terms apply to that file's
+derived content.
+
+## 2. DeepSeek Harness
+
+Source: https://github.com/deepseek-ai/deepseek-harness
+License: MIT
+
+This preset targets the DeepSeek Harness (dsh) plugin/profile system and
+mounts `@deepseek-ai/dsh-*` packages at runtime. Those packages are not
+vendored here; they are resolved from the user's dsh installation.
+
+DeepSeek is a trademark of its respective owner. This project is a community
+artifact and is not endorsed by DeepSeek.
+
+## 3. xiaobright/dsh-anchored-standard and xiaobright/modeltest
+
+License: MIT
+
+The first-turn anchoring mechanism (narrow tool surface, expand after the
+first durable tool call) present in the upstream bootstrap files is a
+plugin-level port of the bootstrap filter from `xiaobright/dsh-anchored-standard`,
+and the trajectory lexicon classifier follows `xiaobright/modeltest`.
+These mechanisms arrive transitively via the copied upstream files above.
+
+## Original work in this repository
+
+The following are original to this project:
+
+    agent.cordis.yml   — the Chinese scientific-research persona, the
+                         WSL<->Windows tool-routing contract, the scientific
+                         writing discipline, and the cross-session resume
+                         workflow (all other composition rows are upstream)
+    preset.yml         — preset metadata
+    README.md          — this repository's documentation

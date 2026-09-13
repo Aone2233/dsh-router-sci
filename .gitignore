@@ -1,0 +1,8 @@
+node_modules/
+*.log
+.tmp/
+
+# dsh runtime state that must never be committed
+stages.json
+*.bak
+_backup*/
