@@ -116,8 +116,13 @@ README.md / NOTICE （文档与许可说明）
 请注意 `agent.cordis.yml` **同时**包含派生的插件行与原创的 persona，
 两部分的归属不同，详见 [NOTICE](NOTICE)。
 
-若上游发布新版本，可自行同步上述代码文件；同步 `router-core.mjs` 时注意
-本仓库对它做过一处兼容性补丁（`sessionEvents` 回退，见文件内注释）。
+若上游发布新版本，可自行同步上述代码文件。
+
+注意 `router-core.mjs`（无版本别名）与 `router-core-v34.mjs`（版本快照）
+在本仓库中内容相同，且都包含上游 `39ee0a0` 引入的 `sessionEvents` 辅助。
+但上游仓库自身的别名文件尚未跟进该修复（其 `router-core.mjs` 仍是旧版，
+缺 `sessionEvents`），因此**从上游同步时请以 `-v34` 快照为准**，
+不要用上游的别名覆盖本仓库的别名，以免两个 core 文件出现版本漂移。
 
 ## 自定义
 
